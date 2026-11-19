@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Las relaciones familiares en la adolescencia</title>
+<meta name="description" content="Póster: retos de la adolescencia en las relaciones familiares y cómo acompañarlos desde el aula.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:#E4E6EA;font-family:'Space Grotesk',sans-serif;-webkit-text-size-adjust:100%}
+body{overflow:hidden}
+a{color:#3F38C8}a:hover{color:#15151A}
+
+/* zona de visualización: ocupa toda la pantalla y permite desplazarse cuando hay zoom */
+#viewport{position:fixed;inset:0;overflow:auto;-webkit-overflow-scrolling:touch;cursor:default;touch-action:pan-x pan-y}
+#viewport.grab,#viewport.grab .hv{cursor:grab}
+#viewport.grabbing,#viewport.grabbing *{cursor:grabbing!important;user-select:none}
+#stage{display:flex;align-items:center;justify-content:center;width:max-content;min-width:100%;min-height:100%;padding:var(--pad) var(--pad) calc(var(--pad) + var(--bar))}
+#sizer{position:relative;flex:none;box-shadow:0 10px 40px rgba(20,20,30,.18);border-radius:6px;overflow:visible}
+#poster{position:absolute;left:0;top:0;transform-origin:0 0;border-radius:6px}
+
+/* fichas emergentes: mantienen un tamaño de lectura constante en pantalla */
+.hv{position:relative;cursor:help;outline:none;transition:box-shadow .15s}
+.hv:hover,.hv:focus{box-shadow:0 0 0 calc(3px * var(--inv,1)) #18181D;z-index:40}
+.tip{position:absolute;left:0;right:0;top:calc(100% + 10px);z-index:50;padding:calc(14px * var(--inv,1)) calc(16px * var(--inv,1));background:#18181D;color:#FFFFFF;border-radius:calc(12px * var(--inv,1));font-family:'Space Grotesk',sans-serif;font-size:calc(16px * var(--inv,1));line-height:1.45;font-weight:400;letter-spacing:0;text-align:left;white-space:normal;display:none;pointer-events:none;box-shadow:0 14px 34px rgba(0,0,0,.28)}
+.hv:hover .tip,.hv:focus .tip{display:block;animation:tipin .15s ease-out}
+@keyframes tipin{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+.tip.up{top:auto;bottom:calc(100% + 10px)}
+.tip.right{left:calc(100% + 14px);right:auto;top:0;width:calc(400px * var(--inv,1))}
+.tip.w{right:auto;width:calc(340px * var(--inv,1))}
+.tip.wr{left:auto;right:0;width:calc(460px * var(--inv,1))}
+.tip.tr{left:auto;right:0}
+
+/* barra de zoom */
+#bar{position:fixed;left:50%;bottom:max(14px, env(safe-area-inset-bottom));transform:translateX(-50%);z-index:100;display:flex;align-items:center;gap:4px;padding:6px;background:#18181D;border-radius:999px;box-shadow:0 8px 28px rgba(0,0,0,.3)}
+#bar button{appearance:none;border:0;margin:0;display:inline-flex;align-items:center;justify-content:center;gap:6px;height:44px;min-width:44px;padding:0 12px;border-radius:999px;background:transparent;color:#FFFFFF;font:600 15px/1 'Space Grotesk',sans-serif;cursor:pointer}
+#bar button:hover{background:rgba(255,255,255,.12)}
+#bar button:focus-visible{outline:2px solid #F4C542;outline-offset:2px}
+#bar button.on{background:#FFFFFF;color:#18181D}
+#bar .sep{width:1px;height:24px;background:rgba(255,255,255,.2);margin:0 4px}
+#zoomval{min-width:64px;text-align:center;color:#FFFFFF;font:600 15px/1 'Space Grotesk',sans-serif;font-variant-numeric:tabular-nums}
+#bar svg{width:20px;height:20px}
+@media (max-width:560px){#bar .lbl{display:none}#bar button{padding:0 10px}#zoomval{min-width:52px}}
+@media print{#bar{display:none}body{overflow:visible;background:#fff}#viewport{position:static;overflow:visible}#stage{padding:0}#sizer{box-shadow:none}}
+</style>
+</head>
+<body>
+<div id="viewport">
+<div id="stage">
+<div id="sizer">
+<div id="poster" style="width: 2546px; height: 1800px; box-sizing: border-box; padding: 52px 64px 44px; display: flex; flex-direction: column; background: #F3F4F6; font-family: 'Space Grotesk', sans-serif; color: #15151A">
+
+<header style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 30px">
+<div>
+<p style="margin: 0; font-size: 18px; font-weight: 600; letter-spacing: 0.16em; color: #3A3A44">APRENDIZAJE Y DESARROLLO DE LA PERSONALIDAD · PREGUNTA 2</p>
+<h1 style="margin: 6px 0 0; font-size: 74px; line-height: 1.02; font-weight: 700; letter-spacing: -0.01em">Las relaciones familiares en la adolescencia</h1>
+</div>
+<p style="margin: 0 0 10px; max-width: 560px; text-align: right; font-size: 22px; line-height: 1.35; color: #3A3A44">¿Qué retos afrontan las y los adolescentes con su familia y cómo podemos acompañarlos desde el aula?</p>
+</header>
+
+<div style="display: grid; grid-template-columns: 260px 70px 330px repeat(4, 415px); grid-template-rows: 70px repeat(5, 168px); column-gap: 16px; row-gap: 14px">
+
+<div style="grid-column: 1; grid-row: 1 / 7; position: relative">
+<div class="hv" tabindex="0" style="position: absolute; left: 0; top: 0; width: 260px; height: 330px; box-sizing: border-box; padding: 22px; background: #FFFFFF; border-radius: 16px; display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 700; letter-spacing: 0.14em; color: #3A3A44"><span style="flex: none; display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: #18181D; color: #FFFFFF; font-size: 22px; font-weight: 700; letter-spacing: 0; line-height: 1; vertical-align: middle;">1</span>POR QUÉ IMPORTA</p>
+<p style="margin: 0; font-size: 21px; line-height: 1.3; font-weight: 600">La familia sigue siendo el contexto clave del desarrollo.</p>
+<p style="margin: 0; font-size: 16px; line-height: 1.4; color: #3A3A44">La relación no se rompe: se reajusta a una persona cada vez más autónoma.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto"><span style="padding: 5px 12px; border-radius: 999px; background: #EDEEF1; font-size: 14px; font-weight: 600">Calidad del vínculo</span><span style="padding: 5px 12px; border-radius: 999px; background: #EDEEF1; font-size: 14px; font-weight: 600">no estructura</span></div>
+<div class="tip right">La familia sigue siendo un contexto fundamental para el desarrollo adolescente. Su influencia depende sobre todo de la calidad de las relaciones: el afecto, la comunicación y las prácticas educativas de los padres (Parra y Oliva, 2015).</div>
+</div>
+
+<div class="hv" tabindex="0" style="position: absolute; left: 0; top: 362px; width: 260px; height: 340px; box-sizing: border-box; padding: 24px 20px; background: #18181D; color: #FFFFFF; border-radius: 16px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 10px">
+<svg aria-hidden="true" width="190" height="130" viewBox="0 0 190 130">
+<circle cx="160" cy="22" r="12" fill="#F4C542"></circle>
+<path d="M95 18 C 88 8, 74 12, 80 24 L95 36 L110 24 C 116 12, 102 8, 95 18 Z" fill="#E86A6A"></path>
+<path d="M40 70 L95 40 L150 70 Z" fill="#C2452D"></path>
+<rect x="50" y="70" width="90" height="48" fill="#FFFFFF"></rect>
+<rect x="60" y="80" width="18" height="14" rx="2" fill="#8C88E8"></rect>
+<rect x="112" y="80" width="18" height="14" rx="2" fill="#8C88E8"></rect>
+<path d="M86 118 L86 98 Q95 90 104 98 L104 118 Z" fill="#2F786E"></path>
+<circle cx="24" cy="94" r="12" fill="#2F786E"></circle><rect x="22" y="104" width="4" height="14" fill="#9AA0A6"></rect>
+<circle cx="168" cy="96" r="10" fill="#5DBAA8"></circle><rect x="166" y="104" width="4" height="14" fill="#9AA0A6"></rect>
+<rect x="10" y="118" width="170" height="3" rx="1.5" fill="#55555E"></rect>
+</svg>
+<p style="margin: 0; font-size: 36px; line-height: 1.05; font-weight: 700">Relaciones familiares</p>
+<p style="margin: 0; font-size: 17px; line-height: 1.35; color: #C9C9D1">Cinco hitos que cambian en la adolescencia</p>
+<div class="tip right">Recorremos cinco hitos. En cada uno vemos cómo se manifiesta, qué reto plantea, qué necesita el adolescente y cómo podemos acompañarlo desde el aula.</div>
+</div>
+
+<div class="hv" tabindex="0" style="position: absolute; left: 0; top: 734px; width: 260px; height: 246px; box-sizing: border-box; padding: 20px; background: #FFFFFF; border-radius: 16px; display: flex; flex-direction: column; align-items: center; gap: 8px; text-align: center">
+<p style="margin: 0; font-size: 14px; font-weight: 700; letter-spacing: 0.14em; color: #3A3A44">IDEA CLAVE</p>
+<svg aria-hidden="true" width="210" height="96" viewBox="0 0 210 96" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M30 24 L180 24" stroke="#18181D" stroke-width="4"></path>
+<circle cx="105" cy="24" r="6" fill="#18181D"></circle>
+<path d="M105 30 L88 84 L122 84 Z" fill="#18181D"></path>
+<path d="M30 24 L12 62 M30 24 L48 62 M180 24 L162 62 M180 24 L198 62" stroke="#18181D" stroke-width="2"></path>
+<path d="M8 62 Q30 78 52 62 Z" fill="#B44A24"></path>
+<path d="M158 62 Q180 78 202 62 Z" fill="#2F786E"></path>
+</svg>
+<div style="width: 210px; display: flex; justify-content: space-between; font-size: 15px; font-weight: 700"><span style="color: #8F3518">Autonomía</span><span style="color: #1F5A52">Apoyo</span></div>
+<p style="margin: 0; font-size: 17px; line-height: 1.3; font-weight: 600">No hay que elegir: hay que encontrar un nuevo equilibrio</p>
+<div class="tip right">El adolescente necesita tomar sus propias decisiones, construir su identidad y ganar independencia, pero eso no significa que deje de necesitar a su familia. El afecto, la comunicación, la confianza y una supervisión adecuada siguen siendo fundamentales.</div>
+</div>
+</div>
+
+<svg aria-hidden="true" style="grid-column: 2; grid-row: 2 / 7; margin-left: -16px" width="102" height="896" viewBox="0 0 102 896" fill="none" stroke="#9AA0A6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M0 448 L26 448"></path>
+<path d="M26 84 L26 812"></path>
+<path d="M26 84 L96 84 M90 79 L96 84 L90 89"></path>
+<path d="M26 266 L96 266 M90 261 L96 266 L90 271"></path>
+<path d="M26 448 L96 448 M90 443 L96 448 L90 453"></path>
+<path d="M26 630 L96 630 M90 625 L96 630 L90 635"></path>
+<path d="M26 812 L96 812 M90 807 L96 812 L90 817"></path>
+</svg>
+
+<div style="grid-column: 3; grid-row: 1; display: flex; align-items: center; gap: 14px">
+<div style="width: 52px; height: 52px; border-radius: 12px; background: #18181D; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12 L9 6 L13 10 L21 3"></path><path d="M15 3 L21 3 L21 9"></path><path d="M3 21 L21 21"></path></svg></div>
+<p style="margin: 0; display: flex; align-items: center; gap: 10px; font-size: 24px; line-height: 1.15; font-weight: 600"><span style="flex: none; display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: #18181D; color: #FFFFFF; font-size: 22px; font-weight: 700; letter-spacing: 0; line-height: 1; vertical-align: middle;">2</span>Cinco hitos</p>
+</div>
+<div style="grid-column: 4; grid-row: 1; display: flex; align-items: center; gap: 14px">
+<div style="width: 52px; height: 52px; border-radius: 12px; background: #18181D; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12 C 5 6, 19 6, 22 12 C 19 18, 5 18, 2 12 Z"></path><circle cx="12" cy="12" r="3"></circle></svg></div>
+<p style="margin: 0; font-size: 24px; line-height: 1.15; font-weight: 600">¿Cómo se ve?</p>
+</div>
+<div style="grid-column: 5; grid-row: 1; display: flex; align-items: center; gap: 14px">
+<div style="width: 52px; height: 52px; border-radius: 12px; background: #18181D; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 21 L9 9 L13 15 L16 11 L22 21 Z"></path><path d="M9 9 L9 3 L14 5 L9 7"></path></svg></div>
+<p style="margin: 0; display: flex; align-items: center; gap: 10px; font-size: 24px; line-height: 1.15; font-weight: 600"><span style="flex: none; display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: #18181D; color: #FFFFFF; font-size: 22px; font-weight: 700; letter-spacing: 0; line-height: 1; vertical-align: middle;">3</span>¿Cuál es el reto?</p>
+</div>
+<div style="grid-column: 6; grid-row: 1; display: flex; align-items: center; gap: 14px">
+<div style="width: 52px; height: 52px; border-radius: 12px; background: #18181D; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21 C 12 21, 3 15, 3 9 C 3 6, 5 4, 8 4 C 10 4, 11 5, 12 7 C 13 5, 14 4, 16 4 C 19 4, 21 6, 21 9 C 21 15, 12 21, 12 21 Z"></path></svg></div>
+<p style="margin: 0; display: flex; align-items: center; gap: 10px; font-size: 24px; line-height: 1.15; font-weight: 600"><span style="flex: none; display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: #18181D; color: #FFFFFF; font-size: 22px; font-weight: 700; letter-spacing: 0; line-height: 1; vertical-align: middle;">5</span>¿Qué necesita?</p>
+</div>
+<div style="grid-column: 7; grid-row: 1; display: flex; align-items: center; gap: 14px">
+<div style="width: 52px; height: 52px; border-radius: 12px; background: #18181D; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10 L12 4 L21 10"></path><path d="M5 10 L5 20 L19 20 L19 10"></path><path d="M10 20 L10 14 L14 14 L14 20"></path></svg></div>
+<p style="margin: 0; display: flex; align-items: center; gap: 10px; font-size: 24px; line-height: 1.15; font-weight: 600"><span style="flex: none; display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: #18181D; color: #FFFFFF; font-size: 22px; font-weight: 700; letter-spacing: 0; line-height: 1; vertical-align: middle;">6</span>¿Y en el aula?</p>
+</div>
+
+<div class="hv" tabindex="0" style="grid-column: 3; grid-row: 2; box-sizing: border-box; padding: 18px; background: #2F786E; color: #FFFFFF; border-radius: 16px; display: flex; align-items: center; gap: 16px">
+<div style="flex: none; width: 80px; height: 80px; border-radius: 50%; background: rgba(255,255,255,0.16); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="56" height="56" viewBox="0 0 56 56"><path d="M28 46 C 28 46, 8 33, 8 20 C 8 13, 13 9, 19 9 C 23 9, 26 11, 28 15 C 30 11, 33 9, 37 9 C 43 9, 48 13, 48 20 C 48 33, 28 46, 28 46 Z" fill="#F4C542"></path><path d="M18 20 C 18 16, 21 14, 24 14" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"></path></svg></div>
+<div><p style="margin: 0; font-size: 14px; font-weight: 700; letter-spacing: 0.14em; color: #CFE6E2">HITO 01</p><p style="margin: 4px 0 0; font-size: 23px; line-height: 1.1; font-weight: 700">El afecto cambia de forma</p></div>
+<div class="tip">Se produce un aparente distanciamiento afectivo: disminuyen las muestras externas y efusivas de cariño para proyectar una imagen de madurez e independencia. No dejan de necesitar amor y apoyo: piden formas de afecto más adultas.</div>
+</div>
+<div class="hv" tabindex="0" style="grid-column: 4; grid-row: 2; box-sizing: border-box; padding: 18px 20px; background: #FFFFFF; border-radius: 16px; display: flex; flex-direction: column; gap: 12px"><div style="display: flex; align-items: center; gap: 12px"><span style="flex: none; width: 38px; height: 38px; border-radius: 10px; background: #E3F0EE; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1F5A52" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"></path><path d="M5 21V9l7-5 7 5v12"></path><path d="M10 21v-5h4v5"></path></svg></span><p style="margin: 0; font-size: 21px; line-height: 1.2; font-weight: 600">Menos besos y abrazos en público</p></div><div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="padding: 4px 11px; border-radius: 999px; background: #E3F0EE; color: #1F5A52; font-size: 14px; font-weight: 600">Puerta del instituto</span><span style="padding: 4px 11px; border-radius: 999px; background: #E3F0EE; color: #1F5A52; font-size: 14px; font-weight: 600">Imagen de madurez</span><span style="padding: 4px 11px; border-radius: 999px; background: #E3F0EE; color: #1F5A52; font-size: 14px; font-weight: 600">Afecto más adulto</span></div><div class="tip">Por ejemplo, rechazan un beso en la puerta del instituto delante de sus amigos. La intensidad varía según la historia previa: en familias con vínculos cálidos en la infancia, la cercanía emocional se mantiene aunque haya menos expresividad física.</div></div>
+<div class="hv" tabindex="0" style="grid-column: 5; grid-row: 2; box-sizing: border-box; padding: 18px 20px; background: #FFFFFF; border-radius: 16px; display: flex; flex-direction: column; gap: 12px"><div style="display: flex; align-items: center; gap: 12px"><span style="flex: none; width: 38px; height: 38px; border-radius: 10px; background: #E3F0EE; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1F5A52" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a4 4 0 0 0 5.66 0l3-3a4 4 0 0 0-5.66-5.66l-1 1"></path><path d="M14 10a4 4 0 0 0-5.66 0l-3 3a4 4 0 0 0 5.66 5.66l1-1"></path></svg></span><p style="margin: 0; font-size: 21px; line-height: 1.2; font-weight: 600">Adaptar el vínculo sin perderlo</p></div><div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="padding: 4px 11px; border-radius: 999px; background: #E3F0EE; color: #1F5A52; font-size: 14px; font-weight: 600">Sentirse querido</span><span style="padding: 4px 11px; border-radius: 999px; background: #E3F0EE; color: #1F5A52; font-size: 14px; font-weight: 600">Seguridad emocional</span></div><div class="tip">Adaptar la relación afectiva a una etapa en la que necesita más independencia, pero también seguridad emocional. Posible dificultad: la falta de afecto o el distanciamiento pueden hacer que no se sienta comprendido ni seguro.</div></div>
+<div class="hv" tabindex="0" style="grid-column: 6; grid-row: 2; box-sizing: border-box; padding: 18px 20px; background: #FFFFFF; border-radius: 16px; display: flex; flex-direction: column; gap: 12px"><div style="display: flex; align-items: center; gap: 12px"><span style="flex: none; width: 38px; height: 38px; border-radius: 10px; background: #E3F0EE; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1F5A52" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"></path></svg></span><p style="margin: 0; font-size: 21px; line-height: 1.2; font-weight: 600">Afecto adaptado a su edad</p></div><div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="padding: 4px 11px; border-radius: 999px; background: #E3F0EE; color: #1F5A52; font-size: 14px; font-weight: 600">Saber que puede acudir</span><span style="padding: 4px 11px; border-radius: 999px; background: #E3F0EE; color: #1F5A52; font-size: 14px; font-weight: 600">Disponibilidad</span><span style="padding: 4px 11px; border-radius: 999px; background: #E3F0EE; color: #1F5A52; font-size: 14px; font-weight: 600">Autoestima</span></div><div class="tip tr">Recibir muestras de afecto adaptadas a su edad, sentirse escuchado y saber que puede acudir a sus padres, sobre todo ante inseguridades, problemas personales o conflictos. Las relaciones cálidas favorecen la autoestima y el bienestar.</div></div>
+<div class="hv" tabindex="0" style="grid-column: 7; grid-row: 2; box-sizing: border-box; padding: 16px 20px; background: #FFFFFF; border-radius: 16px; display: flex; flex-direction: column; gap: 8px"><p style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.14em; color: #1F5A52">→ PROPUESTA 1</p><div style="display: flex; align-items: center; gap: 12px"><span style="flex: none; width: 38px; height: 38px; border-radius: 10px; background: #E3F0EE; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1F5A52" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 4-6 8-6s8 2 8 6"></path></svg></span><p style="margin: 0; font-size: 21px; line-height: 1.2; font-weight: 600">Un adulto de referencia cercano</p></div><div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="padding: 4px 11px; border-radius: 999px; background: #E3F0EE; color: #1F5A52; font-size: 14px; font-weight: 600">Interés por lo personal</span><span style="padding: 4px 11px; border-radius: 999px; background: #E3F0EE; color: #1F5A52; font-size: 14px; font-weight: 600">Trato respetuoso</span></div><div class="tip tr">Mostrar interés por sus preocupaciones personales y académicas. Algunos adolescentes tienen dificultades para comunicarse con su familia: el docente puede convertirse en una figura adulta que ofrece escucha, orientación y apoyo.</div></div>
+
+<div class="hv" tabindex="0" style="grid-column: 3; grid-row: 3; box-sizing: border-box; padding: 18px; background: #3F38C8; color: #FFFFFF; border-radius: 16px; display: flex; align-items: center; gap: 16px">
+<div style="flex: none; width: 80px; height: 80px; border-radius: 50%; background: rgba(255,255,255,0.16); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="60" height="56" viewBox="0 0 60 56"><circle cx="18" cy="14" r="8" fill="#FFFFFF"></circle><path d="M6 48 L6 34 C 6 27, 11 24, 18 24 C 25 24, 30 27, 30 34 L30 48 Z" fill="#FFFFFF"></path><circle cx="42" cy="14" r="8" fill="#F4C542"></circle><path d="M30 48 L30 34 C 30 27, 35 24, 42 24 C 49 24, 54 27, 54 34 L54 48 Z" fill="#F4C542"></path><rect x="4" y="50" width="52" height="3" rx="1.5" fill="#FFFFFF"></rect></svg></div>
+<div><p style="margin: 0; font-size: 14px; font-weight: 700; letter-spacing: 0.14em; color: #D4D2F5">HITO 02</p><p style="margin: 4px 0 0; font-size: 23px; line-height: 1.1; font-weight: 700">Padres reales: desidealización</p></div>
+<div class="tip">Gracias a sus nuevas capacidades cognitivas, abandonan la visión infantil de unos padres que lo saben y lo pueden todo. Como viven relaciones horizontales con sus iguales, intentan trasladar esa autoridad compartida al hogar.</div>
+</div>
+<div class="hv" tabindex="0" style="grid-column: 4; grid-row: 3; box-sizing: border-box; padding: 18px 20px; background: #FFFFFF; border-radius: 16px; display: flex; flex-direction: column; gap: 12px"><div style="display: flex; align-items: center; gap: 12px"><span style="flex: none; width: 38px; height: 38px; border-radius: 10px; background: #E8E7FA; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2E28A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"></path><path d="M7 21h10"></path><path d="M4 7h16"></path><path d="M6 7l-3 6a3 3 0 0 0 6 0z"></path><path d="M18 7l-3 6a3 3 0 0 0 6 0z"></path></svg></span><p style="margin: 0; font-size: 21px; line-height: 1.2; font-weight: 600">Los ve con virtudes y defectos</p></div><div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="padding: 4px 11px; border-radius: 999px; background: #E8E7FA; color: #2E28A0; font-size: 14px; font-weight: 600">Relación más igualitaria</span><span style="padding: 4px 11px; border-radius: 999px; background: #E8E7FA; color: #2E28A0; font-size: 14px; font-weight: 600">Cuestiona normas</span><span style="padding: 4px 11px; border-radius: 999px; background: #E8E7FA; color: #2E28A0; font-size: 14px; font-weight: 600">Desde la pubertad</span></div><div class="tip">Suele comenzar con la pubertad y provoca un desequilibrio inicial en la familia, sobre todo si los padres se resisten a ceder autoridad. Con los años se llega a un equilibrio más equitativo, mucho más fácil en hogares democráticos que en autoritarios.</div></div>
+<div class="hv" tabindex="0" style="grid-column: 5; grid-row: 3; box-sizing: border-box; padding: 18px 20px; background: #FFFFFF; border-radius: 16px; display: flex; flex-direction: column; gap: 12px"><div style="display: flex; align-items: center; gap: 12px"><span style="flex: none; width: 38px; height: 38px; border-radius: 10px; background: #E8E7FA; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2E28A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10v4h4l6 5V5l-6 5z"></path><path d="M17 9a4 4 0 0 1 0 6"></path></svg></span><p style="margin: 0; font-size: 21px; line-height: 1.2; font-weight: 600">Opinar y negociar las normas</p></div><div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="padding: 4px 11px; border-radius: 999px; background: #E8E7FA; color: #2E28A0; font-size: 14px; font-weight: 600">Dialogar</span><span style="padding: 4px 11px; border-radius: 999px; background: #E8E7FA; color: #2E28A0; font-size: 14px; font-weight: 600">Sin imponer</span></div><div class="tip">Aprender a expresar sus opiniones, comunicar sus necesidades y resolver desacuerdos mediante el diálogo. Puede haber falta de entendimiento o problemas para llegar a acuerdos, pero no ocurre en todas las familias.</div></div>
+<div class="hv" tabindex="0" style="grid-column: 6; grid-row: 3; box-sizing: border-box; padding: 18px 20px; background: #FFFFFF; border-radius: 16px; display: flex; flex-direction: column; gap: 12px"><div style="display: flex; align-items: center; gap: 12px"><span style="flex: none; width: 38px; height: 38px; border-radius: 10px; background: #E8E7FA; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2E28A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M8 12l3 3 5-6"></path></svg></span><p style="margin: 0; font-size: 21px; line-height: 1.2; font-weight: 600">Que se respeten sus opiniones</p></div><div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="padding: 4px 11px; border-radius: 999px; background: #E8E7FA; color: #2E28A0; font-size: 14px; font-weight: 600">Participar en decisiones</span><span style="padding: 4px 11px; border-radius: 999px; background: #E8E7FA; color: #2E28A0; font-size: 14px; font-weight: 600">Identidad propia</span></div><div class="tip tr">Que sus padres respeten sus opiniones aunque sean diferentes y le dejen participar en decisiones: elegir amistades, organizar su tiempo libre o decisiones académicas. Así desarrolla su identidad y la confianza en sus capacidades.</div></div>
+<div class="hv" tabindex="0" style="grid-column: 7; grid-row: 3; box-sizing: border-box; padding: 16px 20px; background: #FFFFFF; border-radius: 16px; display: flex; flex-direction: column; gap: 8px"><p style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.14em; color: #2E28A0">→ PROPUESTA 2</p><div style="display: flex; align-items: center; gap: 12px"><span style="flex: none; width: 38px; height: 38px; border-radius: 10px; background: #E8E7FA; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2E28A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"></rect><path d="M5 11a7 7 0 0 0 14 0"></path><path d="M12 18v3"></path></svg></span><p style="margin: 0; font-size: 21px; line-height: 1.2; font-weight: 600">Dar voz al alumnado</p></div><div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="padding: 4px 11px; border-radius: 999px; background: #E8E7FA; color: #2E28A0; font-size: 14px; font-weight: 600">Debates</span><span style="padding: 4px 11px; border-radius: 999px; background: #E8E7FA; color: #2E28A0; font-size: 14px; font-weight: 600">Decisiones compartidas</span></div><div class="tip tr">Permitir que el alumnado participe en algunas decisiones sobre las actividades y la organización del aula, y fomentar el pensamiento crítico y el respeto por las opiniones diferentes.</div></div>
+
+<div class="hv" tabindex="0" style="grid-column: 3; grid-row: 4; box-sizing: border-box; padding: 18px; background: #B44A24; color: #FFFFFF; border-radius: 16px; display: flex; align-items: center; gap: 16px">
+<div style="flex: none; width: 80px; height: 80px; border-radius: 50%; background: rgba(255,255,255,0.16); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="60" height="60" viewBox="0 0 60 60"><path d="M40 4 L54 20 L40 38 L26 20 Z" fill="#F4C542"></path><path d="M40 4 L40 38 M26 20 L54 20" stroke="#B44A24" stroke-width="2"></path><path d="M40 38 C 34 46, 22 44, 18 50 C 14 55, 8 54, 6 56" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"></path></svg></div>
+<div><p style="margin: 0; font-size: 14px; font-weight: 700; letter-spacing: 0.14em; color: #F3D4C8">HITO 03</p><p style="margin: 4px 0 0; font-size: 23px; line-height: 1.1; font-weight: 700">Conquista de la autonomía</p></div>
+<div class="tip">Es uno de los hitos centrales del paso a la adultez. Se da en tres planos: conductual (actuar y tomar decisiones propias), cognitivo (sentido de eficacia y control sobre la propia vida) y emocional (vínculos más independientes con los padres).</div>
+</div>
+<div class="hv" tabindex="0" style="grid-column: 4; grid-row: 4; box-sizing: border-box; padding: 18px 20px; background: #FFFFFF; border-radius: 16px; display: flex; flex-direction: column; gap: 12px"><div style="display: flex; align-items: center; gap: 12px"><span style="flex: none; width: 38px; height: 38px; border-radius: 10px; background: #F8E8E1; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8F3518" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"></path><path d="M5 6h11l3 3-3 3H5z"></path></svg></span><p style="margin: 0; font-size: 21px; line-height: 1.2; font-weight: 600">Decide y se independiza</p></div><div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="padding: 4px 11px; border-radius: 999px; background: #F8E8E1; color: #8F3518; font-size: 14px; font-weight: 600">Conductual</span><span style="padding: 4px 11px; border-radius: 999px; background: #F8E8E1; color: #8F3518; font-size: 14px; font-weight: 600">Cognitiva</span><span style="padding: 4px 11px; border-radius: 999px; background: #F8E8E1; color: #8F3518; font-size: 14px; font-weight: 600">Emocional</span><span style="padding: 4px 11px; border-radius: 999px; background: #F8E8E1; color: #8F3518; font-size: 14px; font-weight: 600">Gradual</span></div><div class="tip">No implica romper con la familia, sino hacerse autónomo dentro de una relación positiva con ella. No se alcanza de golpe ni al mismo ritmo: se construye con diálogo y tolerancia ante las opiniones discrepantes.</div></div>
+<div class="hv" tabindex="0" style="grid-column: 5; grid-row: 4; box-sizing: border-box; padding: 18px 20px; background: #FFFFFF; border-radius: 16px; display: flex; flex-direction: column; gap: 12px"><div style="display: flex; align-items: center; gap: 12px"><span style="flex: none; width: 38px; height: 38px; border-radius: 10px; background: #F8E8E1; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8F3518" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4"></circle><path d="M11 12l9-9"></path><path d="M17 6l3 3"></path></svg></span><p style="margin: 0; font-size: 21px; line-height: 1.2; font-weight: 600">Independencia sin romper el vínculo</p></div><div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="padding: 4px 11px; border-radius: 999px; background: #F8E8E1; color: #8F3518; font-size: 14px; font-weight: 600">Asumir consecuencias</span><span style="padding: 4px 11px; border-radius: 999px; background: #F8E8E1; color: #8F3518; font-size: 14px; font-weight: 600">Responsabilidad</span></div><div class="tip">Tomar decisiones propias, desarrollar opiniones y asumir responsabilidades, entendiendo que la libertad implica consecuencias. Puede haber conflictos por un control parental excesivo o por reclamar libertades para las que aún necesita orientación.</div></div>
+<div class="hv" tabindex="0" style="grid-column: 6; grid-row: 4; box-sizing: border-box; padding: 18px 20px; background: #FFFFFF; border-radius: 16px; display: flex; flex-direction: column; gap: 12px"><div style="display: flex; align-items: center; gap: 12px"><span style="flex: none; width: 38px; height: 38px; border-radius: 10px; background: #F8E8E1; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8F3518" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"></path></svg></span><p style="margin: 0; font-size: 21px; line-height: 1.2; font-weight: 600">Libertad progresiva y supervisión</p></div><div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="padding: 4px 11px; border-radius: 999px; background: #F8E8E1; color: #8F3518; font-size: 14px; font-weight: 600">Normas claras</span><span style="padding: 4px 11px; border-radius: 999px; background: #F8E8E1; color: #8F3518; font-size: 14px; font-weight: 600">Según su madurez</span><span style="padding: 4px 11px; border-radius: 999px; background: #F8E8E1; color: #8F3518; font-size: 14px; font-weight: 600">Sin control psicológico</span></div><div class="tip tr">Normas claras, límites razonables y una supervisión adaptada a su madurez, sobre todo cuando pasa más tiempo fuera de casa. Hay que distinguirla del control psicológico (manipulación, culpa, retirada de afecto), que frena la autonomía.</div></div>
+<div class="hv" tabindex="0" style="grid-column: 7; grid-row: 4; box-sizing: border-box; padding: 16px 20px; background: #FFFFFF; border-radius: 16px; display: flex; flex-direction: column; gap: 8px"><p style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.14em; color: #8F3518">→ PROPUESTA 2</p><div style="display: flex; align-items: center; gap: 12px"><span style="flex: none; width: 38px; height: 38px; border-radius: 10px; background: #F8E8E1; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8F3518" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"></circle><path d="M2 20c0-3.5 3-5.5 7-5.5s7 2 7 5.5"></path><circle cx="17" cy="9" r="2.5"></circle><path d="M17 14c2.5 0 5 1.5 5 4.5"></path></svg></span><p style="margin: 0; font-size: 21px; line-height: 1.2; font-weight: 600">Responsabilidades crecientes</p></div><div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="padding: 4px 11px; border-radius: 999px; background: #F8E8E1; color: #8F3518; font-size: 14px; font-weight: 600">Trabajo en grupo</span><span style="padding: 4px 11px; border-radius: 999px; background: #F8E8E1; color: #8F3518; font-size: 14px; font-weight: 600">Reparto de roles</span></div><div class="tip tr">Proponer trabajos en grupo en los que tengan que organizarse y repartirse responsabilidades, y darles cada vez más responsabilidad en tareas y proyectos, sin ejercer un control excesivo.</div></div>
+
+<div class="hv" tabindex="0" style="grid-column: 3; grid-row: 5; box-sizing: border-box; padding: 18px; background: #1F6C9E; color: #FFFFFF; border-radius: 16px; display: flex; align-items: center; gap: 16px">
+<div style="flex: none; width: 80px; height: 80px; border-radius: 50%; background: rgba(255,255,255,0.16); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="60" height="56" viewBox="0 0 60 56"><path d="M4 8 L36 8 Q40 8 40 12 L40 28 Q40 32 36 32 L18 32 L10 40 L10 32 L8 32 Q4 32 4 28 Z" fill="#FFFFFF"></path><path d="M24 24 L52 24 Q56 24 56 28 L56 42 Q56 46 52 46 L50 46 L50 53 L43 46 L28 46 Q24 46 24 42 Z" fill="#F4C542"></path><circle cx="34" cy="35" r="2.2" fill="#1F6C9E"></circle><circle cx="41" cy="35" r="2.2" fill="#1F6C9E"></circle><circle cx="48" cy="35" r="2.2" fill="#1F6C9E"></circle></svg></div>
+<div><p style="margin: 0; font-size: 14px; font-weight: 700; letter-spacing: 0.14em; color: #CCE1EF">HITO 04</p><p style="margin: 4px 0 0; font-size: 23px; line-height: 1.1; font-weight: 700">Una nueva comunicación</p></div>
+<div class="tip">Disminuye el tiempo de interacción, comparten menos asuntos personales y los padres pierden el conocimiento total que tenían de sus rutinas y amistades. Cobra importancia la revelación: que cuenten libremente lo que hacen.</div>
+</div>
+<div class="hv" tabindex="0" style="grid-column: 4; grid-row: 5; box-sizing: border-box; padding: 18px 20px; background: #FFFFFF; border-radius: 16px; display: flex; flex-direction: column; gap: 12px"><div style="display: flex; align-items: center; gap: 12px"><span style="flex: none; width: 38px; height: 38px; border-radius: 10px; background: #E2EEF6; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#165279" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></span><p style="margin: 0; font-size: 21px; line-height: 1.2; font-weight: 600">Cuenta menos de forma espontánea</p></div><div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="padding: 4px 11px; border-radius: 999px; background: #E2EEF6; color: #165279; font-size: 14px; font-weight: 600">Menos tiempo juntos</span><span style="padding: 4px 11px; border-radius: 999px; background: #E2EEF6; color: #165279; font-size: 14px; font-weight: 600">Revelación</span><span style="padding: 4px 11px; border-radius: 999px; background: #E2EEF6; color: #165279; font-size: 14px; font-weight: 600">Más fluida con la madre</span></div><div class="tip">Aumentan las interrupciones y los padres ya no conocen todas sus rutinas y amistades. No ocurre igual en todos los hogares: suele ser más fluida con las madres y depende del clima de confianza construido desde la infancia.</div></div>
+<div class="hv" tabindex="0" style="grid-column: 5; grid-row: 5; box-sizing: border-box; padding: 18px 20px; background: #FFFFFF; border-radius: 16px; display: flex; flex-direction: column; gap: 12px"><div style="display: flex; align-items: center; gap: 12px"><span style="flex: none; width: 38px; height: 38px; border-radius: 10px; background: #E2EEF6; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#165279" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"></path></svg></span><p style="margin: 0; font-size: 21px; line-height: 1.2; font-weight: 600">Expresar lo que siente y necesita</p></div><div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="padding: 4px 11px; border-radius: 999px; background: #E2EEF6; color: #165279; font-size: 14px; font-weight: 600">Confiar</span><span style="padding: 4px 11px; border-radius: 999px; background: #E2EEF6; color: #165279; font-size: 14px; font-weight: 600">Pedir ayuda</span></div><div class="tip">Aprender a expresar opiniones y sentimientos y a comunicar lo que necesita. Pueden aparecer falta de confianza o dificultades para expresar lo que siente.</div></div>
+<div class="hv" tabindex="0" style="grid-column: 6; grid-row: 5; box-sizing: border-box; padding: 18px 20px; background: #FFFFFF; border-radius: 16px; display: flex; flex-direction: column; gap: 12px"><div style="display: flex; align-items: center; gap: 12px"><span style="flex: none; width: 38px; height: 38px; border-radius: 10px; background: #E2EEF6; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#165279" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 9a5 5 0 0 1 10 0c0 3-3 4-3 7a3 3 0 0 1-6 0"></path><path d="M10 9a2 2 0 0 1 4 0"></path></svg></span><p style="margin: 0; font-size: 21px; line-height: 1.2; font-weight: 600">Escucha sin juicio constante</p></div><div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="padding: 4px 11px; border-radius: 999px; background: #E2EEF6; color: #165279; font-size: 14px; font-weight: 600">Interés real</span><span style="padding: 4px 11px; border-radius: 999px; background: #E2EEF6; color: #165279; font-size: 14px; font-weight: 600">Respeto a su intimidad</span></div><div class="tip tr">Que sus padres le escuchen, respeten su intimidad y hablen abiertamente de temas importantes: problemas con amistades, dudas sobre el futuro, sexualidad o conductas de riesgo. Una buena comunicación facilita la autonomía y el bienestar.</div></div>
+<div class="hv" tabindex="0" style="grid-column: 7; grid-row: 5; box-sizing: border-box; padding: 16px 20px; background: #FFFFFF; border-radius: 16px; display: flex; flex-direction: column; gap: 8px"><p style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.14em; color: #165279">→ PROPUESTA 1</p><div style="display: flex; align-items: center; gap: 12px"><span style="flex: none; width: 38px; height: 38px; border-radius: 10px; background: #E2EEF6; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#165279" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h12v8H8l-4 3v-3H3z"></path><path d="M17 9h4v8h-1v3l-3-3h-6v-2"></path></svg></span><p style="margin: 0; font-size: 21px; line-height: 1.2; font-weight: 600">Espacios para hablar</p></div><div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="padding: 4px 11px; border-radius: 999px; background: #E2EEF6; color: #165279; font-size: 14px; font-weight: 600">Diálogo individual</span><span style="padding: 4px 11px; border-radius: 999px; background: #E2EEF6; color: #165279; font-size: 14px; font-weight: 600">Escucha activa</span></div><div class="tip tr">Facilitar espacios de diálogo individual cuando un alumno atraviesa dificultades, escuchar sus opiniones aunque sean diferentes y crear un ambiente en el que pueda hablar sin miedo a ser juzgado.</div></div>
+
+<div class="hv" tabindex="0" style="grid-column: 3; grid-row: 6; box-sizing: border-box; padding: 18px; background: #8A3A7A; color: #FFFFFF; border-radius: 16px; display: flex; align-items: center; gap: 16px">
+<div style="flex: none; width: 80px; height: 80px; border-radius: 50%; background: rgba(255,255,255,0.16); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="60" height="56" viewBox="0 0 60 56"><path d="M4 18 L22 18 L22 10 L34 24 L22 38 L22 30 L4 30 Z" fill="#FFFFFF"></path><path d="M56 26 L38 26 L38 18 L26 32 L38 46 L38 38 L56 38 Z" fill="#F4C542"></path></svg></div>
+<div><p style="margin: 0; font-size: 14px; font-weight: 700; letter-spacing: 0.14em; color: #EBCFE5">HITO 05</p><p style="margin: 4px 0 0; font-size: 23px; line-height: 1.1; font-weight: 700">Más conflictos cotidianos</p></div>
+<div class="tip">Surgen discusiones frecuentes sobre la vida diaria. Nacen de una discrepancia de percepción: los padres ven estos asuntos como normas bajo su autoridad; los adolescentes, como decisiones personales.</div>
+</div>
+<div class="hv" tabindex="0" style="grid-column: 4; grid-row: 6; box-sizing: border-box; padding: 18px 20px; background: #FFFFFF; border-radius: 16px; display: flex; flex-direction: column; gap: 12px"><div style="display: flex; align-items: center; gap: 12px"><span style="flex: none; width: 38px; height: 38px; border-radius: 10px; background: #F4E6F1; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6E2C61" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7z"></path></svg></span><p style="margin: 0; font-size: 21px; line-height: 1.2; font-weight: 600">Roces por ropa, horarios y tareas</p></div><div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="padding: 4px 11px; border-radius: 999px; background: #F4E6F1; color: #6E2C61; font-size: 14px; font-weight: 600">Pico al inicio</span><span style="padding: 4px 11px; border-radius: 999px; background: #F4E6F1; color: #6E2C61; font-size: 14px; font-weight: 600">Bajan con los años</span><span style="padding: 4px 11px; border-radius: 999px; background: #F4E6F1; color: #6E2C61; font-size: 14px; font-weight: 600">Graves: menos del 10 %</span></div><div class="tip">Alcanzan su punto máximo al inicio de la adolescencia, cuando coinciden la pubertad y a veces la crisis de mitad de vida de los padres, y disminuyen con los años. Menos del 10 % de las familias tiene conflictos graves.</div></div>
+<div class="hv" tabindex="0" style="grid-column: 5; grid-row: 6; box-sizing: border-box; padding: 18px 20px; background: #FFFFFF; border-radius: 16px; display: flex; flex-direction: column; gap: 12px"><div style="display: flex; align-items: center; gap: 12px"><span style="flex: none; width: 38px; height: 38px; border-radius: 10px; background: #F4E6F1; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6E2C61" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l8 8 8-8"></path><path d="M12 12v9"></path></svg></span><p style="margin: 0; font-size: 21px; line-height: 1.2; font-weight: 600">Resolver desacuerdos sin agresividad</p></div><div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="padding: 4px 11px; border-radius: 999px; background: #F4E6F1; color: #6E2C61; font-size: 14px; font-weight: 600">Aceptar límites</span><span style="padding: 4px 11px; border-radius: 999px; background: #F4E6F1; color: #6E2C61; font-size: 14px; font-weight: 600">Negociar</span></div><div class="tip">Aprender a expresar desacuerdos, escuchar otras opiniones y aceptar normas y límites. Los conflictos no tienen por qué ser negativos: forman parte de la adaptación a las nuevas necesidades del adolescente.</div></div>
+<div class="hv" tabindex="0" style="grid-column: 6; grid-row: 6; box-sizing: border-box; padding: 18px 20px; background: #FFFFFF; border-radius: 16px; display: flex; flex-direction: column; gap: 12px"><div style="display: flex; align-items: center; gap: 12px"><span style="flex: none; width: 38px; height: 38px; border-radius: 10px; background: #F4E6F1; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6E2C61" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg></span><p style="margin: 0; font-size: 21px; line-height: 1.2; font-weight: 600">Acuerdos en un clima de afecto</p></div><div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="padding: 4px 11px; border-radius: 999px; background: #F4E6F1; color: #6E2C61; font-size: 14px; font-weight: 600">Renegociar límites</span><span style="padding: 4px 11px; border-radius: 999px; background: #F4E6F1; color: #6E2C61; font-size: 14px; font-weight: 600">Conflicto que enseña</span></div><div class="tip tr">Negociar y llegar a acuerdos sobre horarios, tareas, amistades o estudios sin agresividad. Los conflictos moderados, en un ambiente afectuoso y respetuoso, no perjudican el desarrollo e incluso pueden mejorar la relación.</div></div>
+<div class="hv" tabindex="0" style="grid-column: 7; grid-row: 6; box-sizing: border-box; padding: 16px 20px; background: #FFFFFF; border-radius: 16px; display: flex; flex-direction: column; gap: 8px"><p style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.14em; color: #6E2C61">→ PROPUESTA 2</p><div style="display: flex; align-items: center; gap: 12px"><span style="flex: none; width: 38px; height: 38px; border-radius: 10px; background: #F4E6F1; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6E2C61" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2"></rect><path d="M9 4h6v3H9z"></path><path d="M9 12h6"></path><path d="M9 16h4"></path></svg></span><p style="margin: 0; font-size: 21px; line-height: 1.2; font-weight: 600">Normas de aula pactadas</p></div><div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="padding: 4px 11px; border-radius: 999px; background: #F4E6F1; color: #6E2C61; font-size: 14px; font-weight: 600">Acuerdos de grupo</span><span style="padding: 4px 11px; border-radius: 999px; background: #F4E6F1; color: #6E2C61; font-size: 14px; font-weight: 600">Resolver dialogando</span></div><div class="tip tr">Construir con el grupo las normas de convivencia del aula y resolver los desacuerdos dialogando. Así se practica la negociación en un entorno seguro.</div></div>
+
+</div>
+
+<div style="margin-top: 36px; display: grid; grid-template-columns: 1300px minmax(0, 1fr); column-gap: 20px; height: 432px">
+
+<section style="box-sizing: border-box; padding: 24px 28px; background: #FFFFFF; border-radius: 16px; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; justify-content: space-between; align-items: center">
+<h2 style="margin: 0; display: flex; align-items: center; gap: 12px; font-size: 30px; line-height: 1.1; font-weight: 700"><span style="flex: none; display: inline-flex; align-items: center; justify-content: center; width: 50px; height: 50px; border-radius: 50%; background: #18181D; color: #FFFFFF; font-size: 28px; font-weight: 700; letter-spacing: 0; line-height: 1; vertical-align: middle;">4</span>No todos lo viven igual</h2>
+<span class="hv" tabindex="0" style="padding: 6px 14px; border-radius: 999px; background: #18181D; color: #FFFFFF; font-size: 15px; font-weight: 600">Mito: «la adolescencia es una guerra» · Realidad: solo &lt;10 % de conflictos graves<span class="tip up wr">Los conflictos no son universalmente graves: la mayoría son discusiones moderadas que cumplen una función adaptativa, porque permiten renegociar límites y fortalecer la relación en un clima familiar afectuoso.</span></span>
+</div>
+<div style="flex: 1; display: grid; grid-template-columns: 380px 360px minmax(0, 1fr); column-gap: 24px">
+
+<div style="display: flex; flex-direction: column; gap: 8px">
+<p style="margin: 0; font-size: 14px; font-weight: 700; letter-spacing: 0.14em; color: #3A3A44">¿DE QUÉ DEPENDE?</p>
+<div class="hv" tabindex="0" style="display: flex; align-items: center; gap: 12px; padding: 7px 10px; background: #F3F4F6; border-radius: 10px"><span style="flex: none; width: 100px; font-size: 16px; font-weight: 700">Ritmo</span><span style="font-size: 15px; color: #3A3A44">cada cual madura a su tiempo</span><div class="tip up w">No todos alcanzan la misma madurez física, cognitiva y emocional a la vez. Algunos reclaman antes su independencia; otros necesitan más tiempo de acompañamiento. Los choques llegan cuando las expectativas de los padres no encajan con esa madurez.</div></div>
+<div class="hv" tabindex="0" style="display: flex; align-items: center; gap: 12px; padding: 7px 10px; background: #F3F4F6; border-radius: 10px"><span style="flex: none; width: 100px; font-size: 16px; font-weight: 700">Historia</span><span style="font-size: 15px; color: #3A3A44">la infancia es la raíz</span><div class="tip up w">Quienes crecieron en entornos afectuosos suelen mantener la confianza con sus padres aunque haya discusiones. Las relaciones de la adolescencia tienen sus raíces en la infancia.</div></div>
+<div class="hv" tabindex="0" style="display: flex; align-items: center; gap: 12px; padding: 7px 10px; background: #F3F4F6; border-radius: 10px"><span style="flex: none; width: 100px; font-size: 16px; font-weight: 700">Estilo</span><span style="font-size: 15px; color: #3A3A44">cómo educan los padres</span><div class="tip up w">La forma en que los padres educan y se relacionan con sus hijos es uno de los factores que más explican las diferencias: democrático, autoritario, permisivo o indiferente.</div></div>
+<div class="hv" tabindex="0" style="display: flex; align-items: center; gap: 12px; padding: 7px 10px; background: #F3F4F6; border-radius: 10px"><span style="flex: none; width: 100px; font-size: 16px; font-weight: 700">Clima</span><span style="font-size: 15px; color: #3A3A44">con confianza se pacta mejor</span><div class="tip up w">Con una comunicación abierta es más fácil expresar opiniones, llegar a acuerdos y adaptar las normas. La imposición o las discusiones constantes dificultan la relación.</div></div>
+<div class="hv" tabindex="0" style="display: flex; align-items: center; gap: 12px; padding: 7px 10px; background: #F3F4F6; border-radius: 10px"><span style="flex: none; width: 100px; font-size: 16px; font-weight: 700">Amistades</span><span style="font-size: 15px; color: #3A3A44">comparan sus normas</span><div class="tip up w">Los amigos ganan peso en la construcción de la identidad. Comparar las normas y los valores de casa con los del grupo puede generar desacuerdos.</div></div>
+<div class="hv" tabindex="0" style="display: flex; align-items: center; gap: 12px; padding: 7px 10px; background: #F3F4F6; border-radius: 10px"><span style="flex: none; width: 100px; font-size: 16px; font-weight: 700">Estructura</span><span style="font-size: 15px; color: #3A3A44">por sí sola no decide nada</span><div class="tip up w">Monoparental, adoptiva, reconstituida, homoparental, biparental… La estructura familiar por sí sola no determina el bienestar: lo que importa es la calidad de los vínculos.</div></div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 8px">
+<p style="margin: 0; font-size: 14px; font-weight: 700; letter-spacing: 0.14em; color: #3A3A44">ESTILOS EDUCATIVOS</p>
+<div style="flex: 1; display: grid; grid-template-columns: 70px minmax(0, 1fr) minmax(0, 1fr); grid-template-rows: 24px 1fr 1fr; gap: 8px">
+<div></div>
+<div style="text-align: center; font-size: 14px; font-weight: 700">+ afecto</div>
+<div style="text-align: center; font-size: 14px; font-weight: 700">− afecto</div>
+<div style="display: flex; align-items: center; font-size: 14px; font-weight: 700">+ normas</div>
+<div class="hv" tabindex="0" style="box-sizing: border-box; padding: 12px; background: #2F786E; color: #FFFFFF; border-radius: 12px"><p style="margin: 0; font-size: 18px; font-weight: 700">Democrático</p><p style="margin: 4px 0 0; font-size: 14px; line-height: 1.3">más autoestima y desarrollo positivo</p><div class="tip up w">Combina afecto, comunicación, normas y respeto por la autonomía. Favorece un desarrollo positivo y una mayor autoestima.</div></div>
+<div class="hv" tabindex="0" style="box-sizing: border-box; padding: 12px; background: #F3F4F6; border-radius: 12px"><p style="margin: 0; font-size: 18px; font-weight: 700">Autoritario</p><p style="margin: 4px 0 0; font-size: 14px; line-height: 1.3; color: #3A3A44">frena la autonomía</p><div class="tip up w">Control elevado y poca flexibilidad ante las necesidades del adolescente. Puede dificultar su autonomía y generar conflictos.</div></div>
+<div style="display: flex; align-items: center; font-size: 14px; font-weight: 700">− normas</div>
+<div class="hv" tabindex="0" style="box-sizing: border-box; padding: 12px; background: #F3F4F6; border-radius: 12px"><p style="margin: 0; font-size: 18px; font-weight: 700">Permisivo</p><p style="margin: 4px 0 0; font-size: 14px; line-height: 1.3; color: #3A3A44">cuesta aprender límites</p><div class="tip up w">Poca exigencia y poca supervisión, lo que dificulta aprender normas y responsabilidades.</div></div>
+<div class="hv" tabindex="0" style="box-sizing: border-box; padding: 12px; background: #F8E8E1; border-radius: 12px"><p style="margin: 0; font-size: 18px; font-weight: 700; color: #8F3518">Indiferente</p><p style="margin: 4px 0 0; font-size: 14px; line-height: 1.3; color: #8F3518">más problemas emocionales</p><div class="tip up w">Falta de afecto y de supervisión. Puede aumentar los problemas emocionales y de comportamiento.</div></div>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="display: grid; grid-template-columns: minmax(0, 1fr) 28px minmax(0, 1fr); align-items: center; row-gap: 8px">
+<p style="margin: 0; font-size: 14px; font-weight: 700; letter-spacing: 0.14em; color: #8F3518">VULNERABILIDAD</p><div></div><p style="margin: 0; font-size: 14px; font-weight: 700; letter-spacing: 0.14em; color: #1F5A52">PROTECCIÓN</p>
+<span style="padding: 7px 12px; border-radius: 999px; background: #F8E8E1; color: #8F3518; font-size: 15px; font-weight: 600">Falta de afecto</span><svg aria-hidden="true" width="28" height="14" viewBox="0 0 28 14" fill="none" stroke="#9AA0A6" stroke-width="2" stroke-linecap="round"><path d="M3 7 L25 7 M20 3 L25 7 L20 11"></path></svg><span style="padding: 7px 12px; border-radius: 999px; background: #E3F0EE; color: #1F5A52; font-size: 15px; font-weight: 600">Relaciones cálidas</span>
+<span style="padding: 7px 12px; border-radius: 999px; background: #F8E8E1; color: #8F3518; font-size: 15px; font-weight: 600">Control psicológico</span><svg aria-hidden="true" width="28" height="14" viewBox="0 0 28 14" fill="none" stroke="#9AA0A6" stroke-width="2" stroke-linecap="round"><path d="M3 7 L25 7 M20 3 L25 7 L20 11"></path></svg><span style="padding: 7px 12px; border-radius: 999px; background: #E3F0EE; color: #1F5A52; font-size: 15px; font-weight: 600">Respeto a su autonomía</span>
+<span style="padding: 7px 12px; border-radius: 999px; background: #F8E8E1; color: #8F3518; font-size: 15px; font-weight: 600">Sin normas</span><svg aria-hidden="true" width="28" height="14" viewBox="0 0 28 14" fill="none" stroke="#9AA0A6" stroke-width="2" stroke-linecap="round"><path d="M3 7 L25 7 M20 3 L25 7 L20 11"></path></svg><span style="padding: 7px 12px; border-radius: 999px; background: #E3F0EE; color: #1F5A52; font-size: 15px; font-weight: 600">Límites según la edad</span>
+<span style="padding: 7px 12px; border-radius: 999px; background: #F8E8E1; color: #8F3518; font-size: 15px; font-weight: 600">Comunicación pobre</span><svg aria-hidden="true" width="28" height="14" viewBox="0 0 28 14" fill="none" stroke="#9AA0A6" stroke-width="2" stroke-linecap="round"><path d="M3 7 L25 7 M20 3 L25 7 L20 11"></path></svg><span style="padding: 7px 12px; border-radius: 999px; background: #E3F0EE; color: #1F5A52; font-size: 15px; font-weight: 600">Diálogo y confianza</span>
+<span style="padding: 7px 12px; border-radius: 999px; background: #F8E8E1; color: #8F3518; font-size: 15px; font-weight: 600">Conflictos intensos</span><svg aria-hidden="true" width="28" height="14" viewBox="0 0 28 14" fill="none" stroke="#9AA0A6" stroke-width="2" stroke-linecap="round"><path d="M3 7 L25 7 M20 3 L25 7 L20 11"></path></svg><span style="padding: 7px 12px; border-radius: 999px; background: #E3F0EE; color: #1F5A52; font-size: 15px; font-weight: 600">Resolución constructiva</span>
+</div>
+<p style="margin: auto 0 0; font-size: 14px; line-height: 1.35; color: #3A3A44">También influyen el género, la cultura, el nivel socioeconómico y la diversidad funcional.</p>
+</div>
+
+</div>
+</section>
+
+<section style="box-sizing: border-box; padding: 24px 28px; background: #18181D; color: #FFFFFF; border-radius: 16px; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; justify-content: space-between; align-items: baseline">
+<h2 style="margin: 0; display: flex; align-items: center; gap: 12px; font-size: 30px; line-height: 1.1; font-weight: 700"><span style="flex: none; display: inline-flex; align-items: center; justify-content: center; width: 50px; height: 50px; border-radius: 50%; background: #FFFFFF; color: #18181D; font-size: 28px; font-weight: 700; letter-spacing: 0; line-height: 1; vertical-align: middle;">6</span>En el aula: tres propuestas</h2>
+<p style="margin: 0; font-size: 16px; color: #C9C9D1">no sustituimos a la familia, la complementamos</p>
+</div>
+<div style="flex: 1; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 14px">
+
+<div class="hv" tabindex="0" style="box-sizing: border-box; padding: 18px; background: #FFFFFF; color: #15151A; border-radius: 12px; display: flex; flex-direction: column; gap: 10px">
+<p style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.14em; color: #3A3A44">PROPUESTA 1</p>
+<div style="display: flex; align-items: center; gap: 12px"><span style="flex: none; width: 38px; height: 38px; border-radius: 10px; background: #EDEEF1; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#15151A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 9a5 5 0 0 1 10 0c0 3-3 4-3 7a3 3 0 0 1-6 0"></path><path d="M10 9a2 2 0 0 1 4 0"></path></svg></span><p style="margin: 0; font-size: 22px; line-height: 1.15; font-weight: 700">Confianza y escucha</p></div>
+<div style="display: flex; flex-wrap: wrap; gap: 6px"><span style="padding: 4px 10px; border-radius: 999px; background: #E3F0EE; color: #1F5A52; font-size: 13px; font-weight: 600">Hito 01</span><span style="padding: 4px 10px; border-radius: 999px; background: #E2EEF6; color: #165279; font-size: 13px; font-weight: 600">Hito 04</span></div>
+<p style="margin: 0; font-size: 15px; line-height: 1.4; color: #3A3A44">Interesarse por lo personal y lo académico, abrir diálogo individual si alguien lo pasa mal y tratar con respeto mutuo.</p>
+<div class="tip up">Atiende a la necesidad de afecto, seguridad emocional y comunicación. Evitar actitudes autoritarias y fomentar una relación basada en el respeto mutuo: el docente puede ser una figura adulta de referencia.</div>
+</div>
+
+<div class="hv" tabindex="0" style="box-sizing: border-box; padding: 18px; background: #FFFFFF; color: #15151A; border-radius: 12px; display: flex; flex-direction: column; gap: 10px">
+<p style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.14em; color: #3A3A44">PROPUESTA 2</p>
+<div style="display: flex; align-items: center; gap: 12px"><span style="flex: none; width: 38px; height: 38px; border-radius: 10px; background: #EDEEF1; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#15151A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4"></circle><path d="M11 12l9-9"></path><path d="M17 6l3 3"></path></svg></span><p style="margin: 0; font-size: 22px; line-height: 1.15; font-weight: 700">Autonomía en clase</p></div>
+<div style="display: flex; flex-wrap: wrap; gap: 6px"><span style="padding: 4px 10px; border-radius: 999px; background: #E8E7FA; color: #2E28A0; font-size: 13px; font-weight: 600">Hito 02</span><span style="padding: 4px 10px; border-radius: 999px; background: #F8E8E1; color: #8F3518; font-size: 13px; font-weight: 600">Hito 03</span><span style="padding: 4px 10px; border-radius: 999px; background: #F4E6F1; color: #6E2C61; font-size: 13px; font-weight: 600">Hito 05</span></div>
+<p style="margin: 0; font-size: 15px; line-height: 1.4; color: #3A3A44">Decidir con el grupo parte de las actividades, repartir responsabilidades en los trabajos y debatir respetando opiniones.</p>
+<div class="tip up">Atiende a la necesidad de autonomía e identidad. Los adolescentes necesitan aprender a decidir; el profesorado acompaña ese proceso sin control excesivo, para que ganen confianza en sí mismos.</div>
+</div>
+
+<div class="hv" tabindex="0" style="box-sizing: border-box; padding: 18px; background: #FFFFFF; color: #15151A; border-radius: 12px; display: flex; flex-direction: column; gap: 10px">
+<p style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.14em; color: #3A3A44">PROPUESTA 3</p>
+<div style="display: flex; align-items: center; gap: 12px"><span style="flex: none; width: 38px; height: 38px; border-radius: 10px; background: #EDEEF1; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#15151A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"></circle><path d="M2 20c0-3.5 3-5.5 7-5.5s7 2 7 5.5"></path><circle cx="17" cy="9" r="2.5"></circle><path d="M17 14c2.5 0 5 1.5 5 4.5"></path></svg></span><p style="margin: 0; font-size: 22px; line-height: 1.15; font-weight: 700">Todas las familias cuentan</p></div>
+<div style="display: flex; flex-wrap: wrap; gap: 6px"><span style="padding: 4px 10px; border-radius: 999px; background: #EDEEF1; color: #15151A; font-size: 13px; font-weight: 600">Diversidad familiar ④</span></div>
+<p style="margin: 0; font-size: 15px; line-height: 1.4; color: #3A3A44">No dar por hecho «papá y mamá», usar materiales con distintos modelos de familia y tratar con cada una según su situación.</p>
+<div class="tip up">Atiende a la necesidad de aceptación y pertenencia. Ningún modelo familiar determina por sí solo el desarrollo: importa la calidad de los vínculos. Evitar prejuicios y comentarios negativos sobre cualquier estructura familiar.</div>
+</div>
+
+</div>
+</section>
+
+</div>
+
+<footer style="margin-top: auto; padding-top: 14px; border-top: 1px solid #D5D7DC; display: flex; justify-content: space-between; align-items: baseline; gap: 40px">
+<p style="margin: 0; font-size: 15px; line-height: 1.4; color: #3A3A44"><b style="color: #15151A"><span style="flex: none; display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 50%; background: #18181D; color: #FFFFFF; font-size: 19px; font-weight: 700; letter-spacing: 0; line-height: 1; vertical-align: middle; margin-right: 8px;">7</span>Referencias · </b>Parra, A. y Oliva, A. (2015). La familia como contexto para el desarrollo positivo adolescente. En A. Oliva (Coord.), <i>Desarrollo positivo adolescente</i> (pp. 41-58). Síntesis.</p>
+<p style="margin: 0; font-size: 15px; color: #3A3A44; white-space: nowrap">Grupo 10 · Máster de Profesorado · Manuel Bueno, Manuel Flores, Esperanza Madueño, Irene Mateo y María Tamayo</p>
+</footer>
+
+</div>
+</div>
+</div>
+</div>
+
+<nav id="bar" aria-label="Controles de zoom">
+<button type="button" id="zout" aria-label="Alejar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"/></svg></button>
+<span id="zoomval" aria-live="polite">100 %</span>
+<button type="button" id="zin" aria-label="Acercar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+<span class="sep" aria-hidden="true"></span>
+<button type="button" id="zfit" aria-label="Ajustar a la pantalla"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg><span class="lbl">Ajustar</span></button>
+<button type="button" id="zwidth" aria-label="Ajustar al ancho"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h18M7 8l-4 4 4 4M17 8l4 4-4 4"/></svg><span class="lbl">Ancho</span></button>
+<button type="button" id="z100" aria-label="Tamaño real">1:1</button>
+</nav>
+
+<script>
+(function () {
+  var W = 2546, H = 1800, MIN = 0.1, MAX = 3, STEP = 1.2;
+  var vp = document.getElementById('viewport');
+  var stage = document.getElementById('stage');
+  var sizer = document.getElementById('sizer');
+  var poster = document.getElementById('poster');
+  var label = document.getElementById('zoomval');
+  var bar = document.getElementById('bar');
+  var bFit = document.getElementById('zfit'), bWidth = document.getElementById('zwidth');
+  var scale = 1, mode = 'fit';
+
+  function pad() { return window.innerWidth < 600 ? 8 : 24; }
+  function barSpace() { return bar.offsetHeight + 24; }
+  function setPads() {
+    stage.style.setProperty('--pad', pad() + 'px');
+    stage.style.setProperty('--bar', barSpace() + 'px');
+  }
+  function fitScale(kind) {
+    var aw = vp.clientWidth - 2 * pad();
+    var ah = vp.clientHeight - 2 * pad() - barSpace();
+    var s = kind === 'width' ? aw / W : Math.min(aw / W, ah / H);
+    return Math.max(MIN, Math.min(MAX, s));
+  }
+  function apply(s, cx, cy) {
+    // cx, cy: punto de la pantalla que debe quedarse quieto al hacer zoom
+    var r = vp.getBoundingClientRect();
+    if (cx === undefined) { cx = r.width / 2; cy = r.height / 2; }
+    var sr = sizer.getBoundingClientRect();
+    var px = (cx + r.left - sr.left) / scale, py = (cy + r.top - sr.top) / scale;
+    scale = Math.max(MIN, Math.min(MAX, s));
+    sizer.style.width = (W * scale) + 'px';
+    sizer.style.height = (H * scale) + 'px';
+    poster.style.transform = 'scale(' + scale + ')';
+    poster.style.setProperty('--inv', (1 / scale).toFixed(4));
+    label.textContent = Math.round(scale * 100) + ' %';
+    var nr = sizer.getBoundingClientRect();
+    vp.scrollLeft += (nr.left - r.left) + px * scale - cx;
+    vp.scrollTop += (nr.top - r.top) + py * scale - cy;
+    var big = sizer.offsetWidth > vp.clientWidth || sizer.offsetHeight > vp.clientHeight;
+    vp.classList.toggle('grab', big);
+    bFit.classList.toggle('on', mode === 'fit');
+    bWidth.classList.toggle('on', mode === 'width');
+  }
+  function fit(kind) {
+    mode = kind; setPads();
+    apply(fitScale(kind));
+    vp.scrollLeft = 0;
+    if (kind === 'fit') vp.scrollTop = 0;
+  }
+  function zoomBy(f, cx, cy) { mode = 'free'; apply(scale * f, cx, cy); }
+
+  document.getElementById('zin').onclick = function () { zoomBy(STEP); };
+  document.getElementById('zout').onclick = function () { zoomBy(1 / STEP); };
+  document.getElementById('z100').onclick = function () { mode = 'free'; apply(1); };
+  bFit.onclick = function () { fit('fit'); };
+  bWidth.onclick = function () { fit('width'); };
+
+  // Ctrl + rueda o pellizco en el panel táctil: zoom hacia el puntero
+  vp.addEventListener('wheel', function (e) {
+    if (!e.ctrlKey && !e.metaKey) return;
+    e.preventDefault();
+    var r = vp.getBoundingClientRect();
+    zoomBy(Math.exp(-e.deltaY * 0.0025), e.clientX - r.left, e.clientY - r.top);
+  }, { passive: false });
+
+  // Teclado: + − 0 (ajustar) 1 (tamaño real)
+  document.addEventListener('keydown', function (e) {
+    if (e.ctrlKey || e.metaKey || e.altKey) return;
+    if (e.key === '+' || e.key === '=') zoomBy(STEP);
+    else if (e.key === '-' || e.key === '_') zoomBy(1 / STEP);
+    else if (e.key === '0') fit('fit');
+    else if (e.key === '1') { mode = 'free'; apply(1); }
+  });
+
+  // Arrastrar con el ratón para moverse cuando hay zoom
+  var drag = null, justDragged = false;
+  vp.addEventListener('pointerdown', function (e) {
+    if (e.pointerType !== 'mouse' || e.button !== 0 || !vp.classList.contains('grab')) return;
+    if (e.target.closest('#bar')) return;
+    e.preventDefault();
+    drag = { id: e.pointerId, x: e.clientX, y: e.clientY, l: vp.scrollLeft, t: vp.scrollTop, moved: false };
+    try { vp.setPointerCapture(e.pointerId); } catch (err) {}
+  });
+  vp.addEventListener('pointermove', function (e) {
+    if (!drag || e.pointerId !== drag.id) return;
+    var dx = e.clientX - drag.x, dy = e.clientY - drag.y;
+    if (!drag.moved && Math.abs(dx) + Math.abs(dy) < 4) return;
+    drag.moved = true; vp.classList.add('grabbing');
+    if (document.activeElement && document.activeElement.blur) document.activeElement.blur();
+    vp.scrollLeft = drag.l - dx; vp.scrollTop = drag.t - dy;
+  });
+  function endDrag(e) {
+    if (!drag) return;
+    justDragged = drag.moved;
+    try { vp.releasePointerCapture(drag.id); } catch (err) {}
+    drag = null; vp.classList.remove('grabbing');
+    setTimeout(function () { justDragged = false; }, 0);
+  }
+  vp.addEventListener('pointerup', endDrag);
+  vp.addEventListener('pointercancel', endDrag);
+
+  // Pellizco con dos dedos en móvil y tableta
+  var pinch = null;
+  function dist(t) { return Math.hypot(t[0].clientX - t[1].clientX, t[0].clientY - t[1].clientY); }
+  vp.addEventListener('touchstart', function (e) {
+    if (e.touches.length === 2) {
+      var r = vp.getBoundingClientRect();
+      pinch = { d: dist(e.touches), s: scale,
+        cx: (e.touches[0].clientX + e.touches[1].clientX) / 2 - r.left,
+        cy: (e.touches[0].clientY + e.touches[1].clientY) / 2 - r.top };
+    }
+  }, { passive: true });
+  vp.addEventListener('touchmove', function (e) {
+    if (!pinch || e.touches.length !== 2) return;
+    e.preventDefault();
+    mode = 'free'; apply(pinch.s * dist(e.touches) / pinch.d, pinch.cx, pinch.cy);
+  }, { passive: false });
+  vp.addEventListener('touchend', function (e) { if (e.touches.length < 2) pinch = null; });
+
+  // Tocar un recuadro abre su ficha
+  poster.addEventListener('click', function (e) {
+    if (justDragged) return;
+    var el = e.target.closest('.hv');
+    if (el) el.focus({ preventScroll: true });
+  });
+
+  window.addEventListener('resize', function () {
+    setPads();
+    if (mode === 'fit' || mode === 'width') fit(mode); else apply(scale);
+  });
+  fit('fit');
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { if (mode === 'fit') fit('fit'); });
+})();
+</script>
+</body>
+</html>
